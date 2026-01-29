@@ -1,0 +1,427 @@
+/* -------------------------
+   Base + Theme
+--------------------------*/
+:root{
+  --bg: #0b0f14;
+  --bg-soft: #111822;
+  --card: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.10);
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.65);
+  --accent: #7dd3fc;
+}
+
+*{ box-sizing:border-box; }
+
+html,body{
+  margin:0;
+  padding:0;
+  background: radial-gradient(1200px 600px at 30% 10%, #13202c 0%, var(--bg) 60%);
+  color:var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  line-height:1.6;
+}
+
+a{ color:var(--accent); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+img{ max-width:100%; display:block; }
+
+/* -------------------------
+   Layout
+--------------------------*/
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:120px 28px 80px;
+}
+
+.section{
+  margin-top:120px;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:24px;
+  margin-bottom:32px;
+}
+
+.section-head h2{
+  margin:0;
+  font-size:2rem;
+}
+
+.muted{ color:var(--muted); }
+.small{ font-size:0.9rem; }
+
+/* -------------------------
+   Topbar
+--------------------------*/
+.topbar{
+  position:fixed;
+  inset:0 0 auto 0;
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 28px;
+  background: linear-gradient(to bottom, rgba(10,14,20,0.85), rgba(10,14,20,0.65));
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--border);
+  z-index:10;
+}
+
+.brand{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-weight:700;
+  background:var(--card);
+  border:1px solid var(--border);
+}
+
+.nav{
+  display:flex;
+  gap:22px;
+}
+
+.nav a{
+  color:var(--muted);
+  font-weight:500;
+}
+
+.nav a:hover{ color:var(--text); }
+
+.btn{
+  padding:10px 16px;
+  border-radius:999px;
+  background:var(--accent);
+  color:#001018;
+  font-weight:600;
+}
+
+.btn-ghost{
+  background:transparent;
+  border:1px solid var(--border);
+  color:var(--text);
+}
+
+/* -------------------------
+   HERO
+--------------------------*/
+.hero{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap:48px;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Portrait accent ONLY inside the left hero column */
+.hero-left{
+  position: relative;
+  overflow: hidden;
+  padding-top: 22px; /* fills that "gap" above content */
+}
+
+/* The actual portrait image (exists in HTML inside .hero-left) */
+.hero-bg{
+  position:absolute;
+  left:-14%;                 /* show more face */
+  top:50%;
+  transform:translateY(-50%);
+  width:760px;               /* bigger */
+  height:860px;              /* bigger */
+  object-fit:cover;
+  object-position: 65% 10%;  /* tune face placement (x% y%) */
+  opacity:0.32;              /* clearer */
+  filter: contrast(1.06) saturate(0.96);
+  pointer-events:none;
+  z-index:0;
+}
+
+/* Readability fade overlay (keeps text readable) */
+.hero-left::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to right,
+    rgba(11,15,20,0.92) 0%,
+    rgba(11,15,20,0.78) 42%,
+    rgba(11,15,20,0.42) 70%,
+    rgba(11,15,20,0.12) 100%
+  );
+  pointer-events:none;
+  z-index:1;
+}
+
+/* Ensure text is above the photo + fade */
+.hero-left > *:not(.hero-bg){
+  position: relative;
+  z-index:2;
+}
+
+/* Keep hero-right above anything (video/card safe) */
+.hero-right{
+  position:relative;
+  z-index:2;
+}
+
+.kicker{
+  letter-spacing:0.14em;
+  font-size:0.75rem;
+  color:var(--muted);
+  margin-top: 6px;
+}
+
+.hero-name{
+  font-size: clamp(3rem, 5vw, 4.2rem);
+  line-height:1.05;
+  margin:10px 0 10px;
+  text-shadow:0 10px 40px rgba(0,0,0,0.35);
+}
+
+.subtitle{
+  margin:6px 0 10px;
+  color:var(--muted);
+  font-size:1.05rem;
+}
+
+/* --- key alignment tweak:
+   pushes "I build..." down so it starts ~ where the video ends on the right
+   (adjust 26px -> 12px/36px if you want) */
+.lede{
+  max-width:640px;
+  margin:26px 0 16px;
+}
+
+.focus-long{
+  max-width:640px;
+  color:rgba(255,255,255,0.78);
+  line-height:1.65;
+}
+
+.cta-row{
+  display:flex;
+  gap:14px;
+  margin:18px 0;
+}
+
+.chips{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.chip{
+  padding:6px 12px;
+  border-radius:999px;
+  background:var(--card);
+  border:1px solid var(--border);
+  font-size:0.85rem;
+}
+
+/* Hero fill cards */
+.hero-metrics{
+  margin-top:18px;
+}
+
+.grid-3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:18px;
+}
+
+/* -------------------------
+   Cards
+--------------------------*/
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:22px;
+}
+
+.card.glass{
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+}
+
+.card.mini{
+  padding:14px;
+}
+
+.inset{
+  background:rgba(0,0,0,0.25);
+}
+
+/* -------------------------
+   Video
+--------------------------*/
+.video-wrap{
+  position:relative;
+}
+
+.video{
+  width:100%;
+  border-radius:16px;
+  border:1px solid var(--border);
+}
+
+.unmute-btn{
+  position:absolute;
+  right:12px;
+  bottom:12px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(0,0,0,0.5);
+  color:white;
+  border:1px solid var(--border);
+  cursor:pointer;
+}
+
+/* -------------------------
+   Quick links (LEFT, under name)
+   matches your updated HTML:
+   .quicklinks-left .links .link-item .icon
+--------------------------*/
+.quicklinks-left{
+  margin:12px 0 10px;
+  max-width:520px;
+}
+
+.quicklinks-title{
+  margin:0 0 10px;
+  font-size:1.05rem;
+  letter-spacing:0.02em;
+}
+
+.links{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.link-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,0.03);
+  color:var(--text);
+  text-decoration:none;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.link-item:hover{
+  transform: translateY(-1px);
+  background:rgba(255,255,255,0.05);
+  border-color: rgba(125,211,252,0.35);
+  text-decoration:none;
+}
+
+.link-item .icon{
+  width:36px;
+  height:36px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  background:rgba(125,211,252,0.10);
+  color: var(--accent);
+  font-weight:800;
+  flex:0 0 auto;
+}
+
+/* -------------------------
+   Grids
+--------------------------*/
+.grid-2{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:24px;
+}
+
+/* -------------------------
+   Lists
+--------------------------*/
+.bullets{
+  padding-left:18px;
+}
+
+.bullets li{
+  margin-bottom:8px;
+}
+
+/* -------------------------
+   News + Credentials
+--------------------------*/
+.news-img{
+  border-radius:16px;
+  border:1px solid var(--border);
+}
+
+.credly-row{
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+}
+
+.credly-badge{
+  width:120px;
+  height:120px;
+  object-fit:contain;
+  border-radius:16px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,0.04);
+  padding:10px;
+}
+
+/* -------------------------
+   Footer
+--------------------------*/
+.footer{
+  margin-top:80px;
+  text-align:center;
+}
+
+/* -------------------------
+   Responsive
+--------------------------*/
+@media (max-width: 900px){
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .grid-3{
+    grid-template-columns:1fr;
+  }
+
+  .grid-2{
+    grid-template-columns:1fr;
+  }
+
+  /* on mobile, reduce background portrait so it doesn't overpower */
+  .hero-bg{
+    left:-30%;
+    width:680px;
+    height:760px;
+    opacity:0.18;
+    object-position: 62% 12%;
+  }
+
+  /* less forced vertical alignment on smaller screens */
+  .lede{
+    margin-top:14px;
+  }
+}

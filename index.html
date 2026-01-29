@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dorsa Rezayat | Human Digital Twin & Ergonomics</title>
+  <meta name="description" content="Dorsa Rezayat — Graduate Research Assistant, Mechanical Engineering (University of Cincinnati). Human Digital Twins, ergonomic risk prediction, physics-informed learning." />
+  <meta property="og:title" content="Dorsa Rezayat | Portfolio" />
+  <meta property="og:description" content="Human Digital Twins • Ergonomic Risk Prediction • Physics-Informed Learning" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home">DR</a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#featured">Featured</a>
+      <a href="#work">Work</a>
+      <a href="#news">News</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-ghost" href="assets/CV-DorsaRezayat.pdf" target="_blank" rel="noopener">Download CV</a>
+  </header>
+
+  <main id="home" class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <!-- Portrait should ONLY live here -->
+        <img class="hero-bg" src="assets/hero-portrait.png" alt="" aria-hidden="true" />
+
+        <p class="kicker">Portfolio</p>
+
+        <h1 class="hero-name">Dorsa Rezayat</h1>
+
+        <p class="subtitle">
+          Graduate Research Assistant, Mechanical Engineering — University of Cincinnati
+        </p>
+
+        <!-- Quick links moved UNDER your name (fills the gap) -->
+        <div class="quicklinks-left" aria-label="Quick links">
+          <h3 class="quicklinks-title">Quick links</h3>
+
+          <div class="links">
+            <a class="link-item" href="https://www.linkedin.com/in/dorsa-rezayat-9983a324b/" target="_blank" rel="noopener">
+              <span class="icon" aria-hidden="true">in</span>
+              <span>LinkedIn</span>
+            </a>
+
+            <a class="link-item" href="https://scholar.google.com/citations?user=PdQV2QMAAAAJ&hl=en" target="_blank" rel="noopener">
+              <span class="icon" aria-hidden="true">🎓</span>
+              <span>Google Scholar</span>
+            </a>
+
+            <a class="link-item" href="mailto:rezayada@mail.uc.edu">
+              <span class="icon" aria-hidden="true">@</span>
+              <span>rezayada@mail.uc.edu</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- This should start lower (you will control exact alignment in CSS via .lede margin) -->
+        <p class="lede">
+          I build simulation-driven <b>Human Digital Twin</b> systems that combine biomechanics, ergonomic risk metrics,
+          and physics-informed AI to support safer, more reliable work in manufacturing environments.
+        </p>
+
+        <p class="focus-long">
+          My work focuses on turning raw motion data into deployable safety intelligence:
+          I design kinematic processing pipelines (local anatomical frames, smoothing, joint-angle dynamics),
+          translate them into ergonomic risk metrics and interpretable violation codes, and train physics-informed
+          learning models that respect biomechanical constraints. The goal is not only accurate prediction, but also
+          actionable, real-time feedback (e.g., smartwatch alerts) and end-of-shift risk summaries that improve worker
+          safety without sacrificing task productivity.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn" href="#featured">See featured project</a>
+          <a class="btn btn-ghost" href="#news">See press coverage</a>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Human Digital Twins</span>
+          <span class="chip">Ergonomics</span>
+          <span class="chip">Physics-Informed ML</span>
+          <span class="chip">Manufacturing</span>
+        </div>
+
+        <div class="grid-3 hero-metrics">
+          <div class="card mini">
+            <h4>Now</h4>
+<p class="muted small">
+  <b>Phase 2 (Ohio BWC)</b> — Real-time ergonomic safety analysis for workers, advancing deployable physics-informed models with support from the Ohio Bureau of Workers’ Compensation.
+</p>
+
+          </div>
+          <div class="card mini">
+            <h4>Impact</h4>
+<p class="muted small">
+  Advancing real-time human ergonomic analysis to improve worker safety by addressing both
+  <b>instantaneous injury risks</b> and <b>long-term (chronic) musculoskeletal strain</b>.
+</p>
+
+          </div>
+          <div class="card mini">
+            <h4>Focus Areas</h4>
+            <p class="muted small">Biomechanics • Human Digital Twin Modeling & Analysis • Physics-Informed Machine Learning • Real-Time Human Safety & Injury Risk Assessment.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card glass">
+
+          <div class="video-wrap">
+            <video
+              id="heroVideo"
+              class="video"
+              autoplay
+              muted
+              playsinline
+              loop
+              preload="metadata"
+              controls
+            >
+              <source src="assets/interview.mp4" type="video/mp4" />
+              Sorry — your browser can’t play this video.
+            </video>
+            <button id="unmuteBtn" class="unmute-btn" type="button">Unmute</button>
+          </div>
+
+          <div class="divider"></div>
+
+          <p class="muted">
+            Cincinnati, OH • Available for research collaboration & industry projects
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="section-head">
+        <h2>About</h2>
+        <p class="muted"></p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Focus</h3>
+          <p>
+            I develop human-centered, physics-consistent AI systems for manufacturing safety. My work integrates
+            biomechanical reasoning (joint kinematics, posture dynamics, ergonomic thresholds) with machine learning
+            to generate actionable feedback, including real-time injury-risk warnings and predictive ergonomic assessments
+            within a Human Digital Twin framework.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Core strengths</h3>
+          <ul class="bullets">
+            <li>Biomechanical & posture-based ergonomic risk assessment</li>
+            <li>Physics-informed deep learning (PINN-style constraints)</li>
+            <li>Digital twin integration for manufacturing tasks</li>
+            <li>Python, PyTorch, OpenSim, Siemens/Process Simulate</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="section-head">
+        <h2>Education</h2>
+        <p class="muted"></p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Ph.D. in Mechanical Engineering</h3>
+          <p class="muted">University of Cincinnati</p>
+          <p class="small">Human Digital Twins • Physics-Informed Learning • Ergonomic Risk Prediction</p>
+        </div>
+
+        <div class="card">
+          <h3>M.S. in Mechanical Engineering</h3>
+          <p class="muted">University of Cincinnati</p>
+          <p class="small">Thesis: Physics-Informed Deep Learning for Personalized Ergonomic Risk Prediction</p>
+        </div>
+
+        <div class="card">
+          <h3>B.S. in Biomedical Engineering</h3>
+          <p class="muted">Tehran, Iran</p>
+          <p class="small">Biomechanics • Human-centered engineering foundations</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED -->
+    <section id="featured" class="section">
+      <div class="section-head">
+        <h2>Featured</h2>
+        <p class="muted"></p>
+      </div>
+
+      <div class="featured">
+        <div class="badge">FEATURED</div>
+        <h3><b>Ohio BWC Human Digital Twin — Ergonomic Risk Prediction for Manufacturing</b></h3>
+        <p class="muted">Funded by the Ohio Bureau of Workers’ Compensation (BWC)</p>
+
+        <div class="grid-2">
+          <div>
+            <p>
+              I lead ergonomic modeling and physics-informed learning within a human digital twin framework aimed at
+              workplace injury prevention. I design end-to-end pipelines that transform motion into interpretable risk metrics,
+              develop models that respect biomechanical constraints, and support scalable, explainable safety feedback suitable
+              for deployment on the factory floor.
+            </p>
+          </div>
+
+          <div class="card inset">
+            <h4>Highlights</h4>
+            <ul class="bullets">
+              <li>Phase 1 demonstrated up to <b>43% improvement</b> in ergonomic safety</li>
+              <li>Phase 2 expands multi-joint kinematics, task context, and worker-specific factors</li>
+              <li>Physics-informed objectives enforce safety limits while preserving throughput</li>
+              <li>Designed for real-time warning + end-of-shift reporting</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn-ghost" href="assets/CV-DorsaRezayat.pdf" target="_blank" rel="noopener">Open CV</a>
+          <a class="btn" href="#contact">Contact about this project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section">
+      <div class="section-head">
+        <h2>Selected Work</h2>
+        <p class="muted"></p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>Phase 2 – Human Digital Twin & Physics-Informed Ergonomic Modeling</h3>
+          <p class="muted">
+            Leading a five-member research team in Phase 2 of a $2M Ohio BWC–funded project advancing a PINN-based
+            human digital twin for ergonomic risk assessment in manufacturing.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Physics-Based Objectives for Safety + Productivity</h3>
+          <p class="muted">
+            Building physics-based learning objectives that enforce ergonomic safety limits while preserving efficient task
+            execution—so safety improvements don’t come at the cost of throughput or usability.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Phase 1 – Human Digital Twin Modeling for Worker Safety</h3>
+          <p class="muted">
+            Served as the project’s ergonomics and digital twin expert, designing and validating risk metrics and pipelines
+            for camera- and smartwatch-based ergonomic feedback on the factory floor.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="section">
+      <div class="section-head">
+        <h2>News & Recognition</h2>
+        <p class="muted"></p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>University of Cincinnati — Real-Time System to Warn of Injury Risks</h3>
+          <p class="muted small">
+            UC News featured our work on developing a real-time AI-driven system that warns workers about injury risks,
+            supporting safer manufacturing environments through human digital twins and ergonomic risk modeling.
+          </p>
+
+          <img class="news-img" src="assets/uc-news.jpg" alt="UC News coverage image" />
+
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="https://www.uc.edu/news/articles/2025/08/uc-engineers-develop-real-time-system-to-warn-of-injury-risks.html" target="_blank" rel="noopener">
+              Read the UC News article
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Spectrum News — Press Coverage</h3>
+         <p class="muted small">
+  Featured by <b>Spectrum News 1</b>: UC’s Ohio BWC–funded research uses human “digital twins” and generative AI to model motion, detect risky postures, and deliver actionable feedback to reduce workplace injuries.
+  <a href="https://spectrumnews1.com/oh/columbus/news/2024/10/23/ohio-worker-safety--artificial-intelligence--ohio-bureau-of-workers-compensation--dr--manish-kumar--dr--sam-anand" target="_blank" rel="noopener">Read the story</a>
+</p>
+
+
+          <video class="video" controls muted preload="metadata">
+            <source src="assets/spectrum.mp4" type="video/mp4" />
+            Sorry — your browser can’t play this video.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section id="credentials" class="section">
+      <div class="section-head">
+        <h2>Credentials</h2>
+        <p class="muted"></p>
+      </div>
+
+      <div class="card">
+        <div class="credly-row">
+          <img class="credly-badge" src="assets/credly-badge.png" alt="Credly badge" />
+          <div>
+            <h3>Designcenter NX Student Day 2025 — Live Participant</h3>
+            <p class="muted small">
+              Verified digital credential recognizing participation and demonstrated engagement with Siemens Designcenter NX
+              Student Day (2025). This aligns with my work at the intersection of simulation workflows and human-centered
+              engineering in manufacturing contexts.
+            </p>
+            <a class="btn btn-ghost" href="https://www.credly.com/badges/c56530b6-5e39-46f2-b659-5e9f397100d0/linked_in?t=t4v2cz" target="_blank" rel="noopener">
+              View verified badge (Credly)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p class="muted"></p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Email</h3>
+          <p><a href="mailto:rezayada@mail.uc.edu">rezayada@mail.uc.edu</a></p>
+          <p class="muted small">University of Cincinnati • Mechanical Engineering</p>
+        </div>
+
+        <div class="card">
+          <h3>Social</h3>
+          <p class="muted small">
+            LinkedIn: <a href="https://www.linkedin.com/in/dorsa-rezayat-9983a324b/" target="_blank" rel="noopener">dorsa-rezayat</a><br/>
+            Google Scholar: <a href="https://scholar.google.com/citations?user=PdQV2QMAAAAJ&hl=en" target="_blank" rel="noopener">Profile</a>
+          </p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p class="muted small">© <span id="year"></span> Dorsa Rezayat • Built with GitHub Pages</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
