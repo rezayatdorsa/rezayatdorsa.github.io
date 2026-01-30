@@ -432,3 +432,17 @@ img{ max-width:100%; display:block; }
   }
 }
 
+/* CV request form inputs */
+.input{
+  width:100%;
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,0.03);
+  color:var(--text);
+  outline:none;
+}
+.input:focus{
+  border-color: rgba(125,211,252,0.45);
+}
+
